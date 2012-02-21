@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>benCoding.Stepper Module</title>
+<style type="text/css">
+.auto-style1 {
+	margin-left: 40px;
+}
+.auto-style2 {
+	margin-left: 80px;
+}
+.auto-style6 {
+	border: 1px solid #000000;
+	background-color: #E8E8E8;
+	font-size: large;
+}
+.auto-style7 {
+	border: 1px solid #000000;
+}
+.auto-style8 {
+	margin-left: 120px;
+}
+.auto-style9 {
+	margin-left: 160px;
+}
+.auto-style10 {
+	border: 1px solid #000000;
+	text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="auto-style1">benCoding.Stepper Module</h1>
+<hr />
+<h2 class="auto-style1">Description</h2>
+<p class="auto-style2">Use the native iOS UIStepper control within your Titanium 
+mobile project. The benCoding.Stepper module makes this easy with an API that is 
+similar to the existing Titanium slider control.</p>
+<h2 class="auto-style1">Before You Start</h2>
+<ul class="auto-style2">
+	<li>This module requires iOS 5 or greater
+	</li>
+	<li>This is an iOS module designed to work with Titanium SDK 1.8.1 or 
+	greater.</li>
+	<li>Before using this module you first need to install the package. If you 
+	need instructions on how to install a 3rd party module please read
+	<a href="https://wiki.appcelerator.org/display/guides/Configuring+Apps+to+Use+Modules">
+	this installation guide</a>..</li>
+	<li>If you would like access to the source code, please visit us on Github at 
+	<a href="https://github.com/benbahrenburg/benCoding.Stepper">https://github.com/benbahrenburg/benCoding.Stepper</a>.</li>
+</ul>
+<h2 class="auto-style1">Accessing the benCoding.Stepper Module</h2>
+<p class="auto-style2">To access this module from JavaScript, you would do the following:
+<div style="border-width: thin; border-style: solid; background-color: #E8E8E8;" class="auto-style8">
+	<p class="auto-style1"><strong>var stepper = require(&#39;bencoding.stepper&#39;);</strong></p>
+</div>
+
+<h2 class="auto-style1">Creating the Control</h2>
+<p class="auto-style2">The below is an example on how to create a stepper 
+control that starts at 10 and goes to 200. The initial value is set to 25 and 
+the fire event will be called each time the value is changed.<div style="border-width: thin; border-style: solid; background-color: #E8E8E8;" class="auto-style8">
+	<p class="auto-style1"><strong>var myStepper = stepper.createStepper({<br />
+&nbsp;&nbsp;&nbsp; min:10, //Minimum stepper value<br />
+&nbsp;&nbsp;&nbsp; max:200,//Maximum stepper value<br />
+&nbsp;&nbsp;&nbsp; value:25, //Initial or starting value of the stepper<br />
+&nbsp;&nbsp;&nbsp; continuous:true //If the stepper should send change events 
+	immediately or wait until touchend<br />
+	});</strong></p>
+</div>
+
+<h2 class="auto-style1">Properties</h2>
+<table style="width: 92%" class="auto-style2">
+	<tr>
+		<td style="width: 120px" class="auto-style6"><strong>Property Name</strong></td>
+		<td style="width: 77px" class="auto-style6">Data Type</td>
+		<td style="width: 102px" class="auto-style6">Default Value</td>
+		<td style="width: 296px" class="auto-style6"><strong>Description</strong></td>
+	</tr>
+	<tr>
+		<td style="width: 120px; height: 23px" class="auto-style7"><strong>min</strong></td>
+		<td style="width: 77px; height: 23px" class="auto-style10">float</td>
+		<td style="width: 102px; height: 23px" class="auto-style10">1</td>
+		<td class="auto-style7" style="width: 296px; height: 23px">the minimum 
+		stepper value&nbsp; (read/write)</td>
+	</tr>
+	<tr>
+		<td style="width: 120px; height: 23px" class="auto-style7"><strong>max</strong></td>
+		<td style="width: 77px; height: 23px" class="auto-style10">float</td>
+		<td style="width: 102px; height: 23px" class="auto-style10">100</td>
+		<td class="auto-style7" style="width: 296px; height: 23px">the maximum 
+		stepper value (read/write)</td>
+	</tr>
+	<tr>
+		<td style="width: 120px; height: 23px" class="auto-style7"><strong>
+		enabled</strong></td>
+		<td style="width: 77px; height: 23px" class="auto-style10">boolean</td>
+		<td style="width: 102px; height: 23px" class="auto-style10">true</td>
+		<td class="auto-style7" style="width: 296px; height: 23px">indicates the 
+		enabled state of the stepper (read/write)</td>
+	</tr>
+	
+	<tr>
+		<td style="width: 120px; height: 23px" class="auto-style7"><strong>
+		continuous</strong></td>
+		<td style="width: 77px; height: 23px" class="auto-style10">boolean</td>
+		<td style="width: 102px; height: 23px" class="auto-style10">true</td>
+		<td class="auto-style7" style="width: 296px; height: 23px">if true, 
+		value change events are sent immediately when the value changes during 
+		user interaction. If false, a value change event is sent when user 
+		interaction ends. (read/write)</td>
+	</tr>
+	
+	<tr>
+		<td style="width: 120px; height: 23px" class="auto-style7"><strong>value</strong></td>
+		<td style="width: 77px; height: 23px" class="auto-style10">float</td>
+		<td style="width: 102px; height: 23px" class="auto-style10">1</td>
+		<td class="auto-style7" style="width: 296px; height: 23px">the current 
+		value of the stepper</td>
+	</tr>
+	
+	<tr>
+		<td style="width: 120px; height: 23px" class="auto-style7"><strong>
+		wraps</strong></td>
+		<td style="width: 77px; height: 23px" class="auto-style10">boolean</td>
+		<td style="width: 102px; height: 23px" class="auto-style10">false</td>
+		<td class="auto-style7" style="width: 296px; height: 23px">if true, 
+		incrementing beyond max sets value to min; likewise, decrementing below 
+		min sets value to max. If false, the stepper does not increment beyond 
+		max nor does it decrement below min but rather holds at those 
+		values.(read/write)<br />
+		</td>
+	</tr>
+	
+	<tr>
+		<td style="width: 120px; height: 23px" class="auto-style7"><strong>
+		stepValue</strong></td>
+		<td style="width: 77px; height: 23px" class="auto-style10">float</td>
+		<td style="width: 102px; height: 23px" class="auto-style10">1</td>
+		<td class="auto-style7" style="width: 296px; height: 23px">the step, or 
+		increment, value for the stepper. Must be numerically greater than 0, by 
+		default this value is 1.</td>
+	</tr>
+	
+</table>
+<h3 class="auto-style2">Property Usage Example</h3>
+<p class="auto-style8">The below example shows how to create the stepper control 
+using all of the properties.&nbsp; Please note any of these properties can be 
+read or set after the control has been created. </p>
+<p class="auto-style8">For additional samples please see the example folder contained within the module 
+or 
+<a href="https://github.com/benbahrenburg/benCoding.Stepper/tree/master/example">here on Github</a>.</p>
+<div style="border-width: thin; border-style: solid; background-color: #E8E8E8;" class="auto-style9">
+	<p class="auto-style1"><strong>var stepper = require(&#39;bencoding.stepper&#39;);<br />
+	<br />
+	var myStepper = stepper.createStepper({<br />
+&nbsp;&nbsp;&nbsp; min:10, //Minimum stepper value (1 by default)<br />
+&nbsp;&nbsp;&nbsp; max:200,//Maximum stepper value (100 by default)<br />
+&nbsp;&nbsp;&nbsp; value:25, //Initial or starting value of the stepper (1 by 
+	default)<br />
+&nbsp;&nbsp;&nbsp; enabled:true, //Control is enabled (true by default)<br />
+&nbsp;&nbsp;&nbsp; wraps:true, //Control will start back at 10 after it hits 
+	it&#39;s max, off by default<br />
+&nbsp;&nbsp;&nbsp; stepValue:2, //Will increment each stepper change action by 
+	2, this is 1 by default<br />
+&nbsp;&nbsp;&nbsp; continuous:true //Event triggered with each value change 
+	(true by default) <br />
+	});<br />
+	</strong><br />
+	</p>
+</div>
+
+<h2 class="auto-style1">Events</h2>
+<table style="width: 92%" class="auto-style2">
+	<tr>
+		<td style="width: 116px" class="auto-style6"><strong>Event Name</strong></td>
+		<td style="width: 296px" class="auto-style6"><strong>Description</strong></td>
+	</tr>
+	<tr>
+		<td class="auto-style7" style="width: 116px"><strong>change</strong></td>
+		<td class="auto-style7" style="width: 296px">This even if called each 
+		time the stepper value is changed.</td>
+	</tr>	
+	<tr>
+		<td class="auto-style7" style="width: 116px"><strong>completed</strong></td>
+		<td class="auto-style7" style="width: 296px">This event is fired when an 
+		SMS message is sent successfully</td>
+	</tr>	
+	<tr>
+		<td class="auto-style7" style="width: 116px"><strong>errored</strong></td>
+		<td class="auto-style7" style="width: 296px">This event is fired when an 
+		error happens sending a message</td>
+	</tr>			
+	</table>
+<h3 class="auto-style2">Event Usage Example</h3>
+<p class="auto-style8">The below example shows how to use the change event. </p>
+<p class="auto-style8">For additional samples please see the example folder contained within the module 
+or 
+<a href="https://github.com/benbahrenburg/benCoding.Stepper/tree/master/example">here on Github</a>.</p>
+<div style="border-width: thin; border-style: solid; background-color: #E8E8E8;" class="auto-style9">
+	<p class="auto-style1"><strong>var stepper = require(&#39;bencoding.stepper&#39;);<br />
+	<br />
+	myStepper.addEventListener(&#39;change&#39;,function(e){<br />
+	myLabel.text = &#39;Quality: &#39; + Math.round(e.value);<br />
+	showEventsLabel.text=&#39;Event = e.value: &#39; + Math.round(e.value) + &#39; 
+	myStepper.value=&#39; + myStepper.value;<br />
+	});</strong><br />
+	</p>
+</div>
+
+<h2 class="auto-style1">Demo Video</h2>
+<p class="auto-style1">Please visit <a href="http://www.youtube.com/watch?v=IMEdwPi96iw">http://www.youtube.com/watch?v=IMEdwPi96iw</a> to see the control in action.</p>
+<h2 class="auto-style1">Licensing</h2>
+<p class="auto-style2">This project is licensed under the OSI 
+approved Apache Public License (version 2). For details please see the license 
+included with module.<br />
+<br />
+Developed by <a href="http://bahrenburgs.com">Ben Bahrenburg </a>on twitter
+<a href="http://twitter.com/bencoding">@benCoding</a></p>
+
+
+</body>
+
+</html>

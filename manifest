@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.4
+apiversion: 2
+description: benCoding.Stepper provides Titanium access to the native iOS UIStepper
+author: benCoding.Com
+license: See attached license file
+copyright: Copyright (c) 2012 by benCoding.Com
+
+
+# these should not be edited
+name: stepper
+moduleid: bencoding.stepper
+guid: 83883a90-ce38-4677-98c8-09dd820675c1
+platform: iphone
+minsdk: 1.8.1
