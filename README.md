@@ -14,6 +14,7 @@ There is two ways you can download this module. The go to the releases/UseIfDown
 <h2>Building from source?</h2>
 
 If you are building from source you will need to do the following:
+
 * Modify the titanium.xcconfig file with the path to your Titanium installation
 * Make sure the the method moduleGUID in the class BencodingDictionaryModule has the variable marketPlace set to NO. This will avoid you running into any licensing issues.
 
@@ -25,7 +26,6 @@ If you are building from source you will need to do the following:
 * You can now use the module via the commonJS require method, example shown below.
 
 <pre><code>
-
 var stepper = require('bencoding.stepper');
 
 </code></pre>
@@ -73,6 +73,7 @@ var myStepper = stepper.createStepper({
     stepValue:2, //Will increment each stepper change action by 2, this is 1 by default
     continuous:true //Event triggered with each value change (true by default) 
 });
+
 </code></pre>
 
 <h2>Events</h2>
@@ -84,6 +85,7 @@ myStepper.addEventListener('change',function(e){
 	myLabel.text = 'Quality: ' + Math.round(e.value);
 	showEventsLabel.text='Event = e.value: ' + Math.round(e.value) + ' myStepper.value=' + myStepper.value;
 });
+
 </code></pre>
 
 <h2>How To Example</h2>
@@ -101,7 +103,7 @@ This project is licensed under the OSI approved Apache Public License (version 2
 Developed by [Ben Bahrenburg](http://bahrenburgs.com) available on twitter [@benCoding](http://twitter.com/benCoding)
 
 <h2>Learn More</h2>
-<hr />
+
 <h3>Twitter</h3>
 
 Please consider following the [@benCoding Twitter](http://www.twitter.com/benCoding) for updates 
