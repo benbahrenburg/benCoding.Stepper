@@ -100,7 +100,7 @@ USE_PROXY_FOR_VERIFY_AUTORESIZING
 
 - (IBAction)stepperPressed:(id)sender
 {
-	NSNumber * newValue = [NSNumber numberWithFloat:[(UISlider *)sender value]];
+	NSNumber * newValue = [NSNumber numberWithFloat:[(UIStepper *)sender value]];
 	[self.proxy replaceValue:newValue forKey:@"value" notification:NO];
     
 	if ([self.proxy _hasListeners:@"change"])

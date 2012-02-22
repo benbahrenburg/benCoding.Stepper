@@ -11,6 +11,19 @@ Use the native iOS UIStepper in your Titanium application. This module provides 
 
 There is two ways you can download this module. The go to the releases/UseIfDownloadingFromGithub folder. This will have a release compiled for anyone download it from github.
 
+Shortly you will also be able to download the compiled module from Appcelerator's marketplace/
+
+<h2>Building from source?</h2>
+
+If you are building from source you will need to do the following:
+
+* Modify the titanium.xcconfig file with the path to your Titanium installation
+* Make sure the the method moduleGUID in the class BencodingDictionaryModule has the variable marketPlace set to NO. This will avoid you running into any licensing issues.
+
+<h2>Download the release</h2>
+
+There is two ways you can download this module. The go to the releases/UseIfDownloadingFromGithub folder. This will have a release compiled for anyone download it from github.
+
 <h2>Building from source?</h2>
 
 If you are building from source you will need to do the following:
@@ -37,12 +50,11 @@ Now we have the module installed and avoid in our project we can start to use th
 The below is an example on how to create a stepper control that starts at 10 and goes to 200. The initial value is set to 25 and the fire event will be called each time the value is changed.
 
 <pre><code>
-
 var myStepper = stepper.createStepper({
 	min:10, //Minimum stepper value
 	max:200,//Maximum stepper value
 	value:25, //Initial or starting value of the stepper
-	continuous:true //If the stepper should send change events immediately or wait until touchend
+	continuous:true //Stepper will increment by 1 ( or stepvalue ) per touch
 });
 
 </code></pre>
@@ -54,7 +66,7 @@ The stepper controls have the following properties.  They can be set or read at 
 * <b>min</b> - the minimum stepper value (number value) (read/write)
 * <b>max</b> - the maximum stepper value (number value) (read/write)
 * <b>enabled</b> - boolean to indicate the enabled state of the stepper
-* <b>continuous</b> - if true, value change events are sent immediately when the value changes during user interaction. If false, a value change event is sent when user interaction ends. (read/write)
+* <b>continuous</b> - if true, value change events are sent immediately when the value changes during user interaction. If false, a value change event is sent when user interaction ends. If true the stepper's value will continue to increase/decrease until the touchend event is fired. (read/write)
 * <b>value</b> - the current value of the stepper (float value) (read/write)
 * <b>wraps</b> - if true, incrementing beyond max sets value to min; likewise, decrementing below min sets value to max. If false, the stepper does not increment beyond max nor does it decrement below min but rather holds at those values. (boolean)(read/write)
 * <b>stepValue</b> - the step, or increment, value for the stepper. Must be numerically greater than 0, by default this value is 1.
@@ -71,7 +83,7 @@ var myStepper = stepper.createStepper({
     enabled:true, //Control is enabled (true by default)
     wraps:true, //Control will start back at 10 after it hits it's max, off by default
     stepValue:2, //Will increment each stepper change action by 2, this is 1 by default
-    continuous:true //Event triggered with each value change (true by default) 
+    continuous:true //Stepper will increment by 1 ( or stepvalue ) per touch
 });
 
 </code></pre>

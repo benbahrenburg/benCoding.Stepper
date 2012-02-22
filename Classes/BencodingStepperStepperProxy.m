@@ -8,7 +8,19 @@
 #import "BencodingStepperStepperProxy.h"
 #import "TiUtils.h"
 
+
+NSArray* stepperKeySequence;
+
 @implementation BencodingStepperStepperProxy
+
+-(NSArray *)keySequence
+{
+	if (stepperKeySequence == nil)
+	{
+		stepperKeySequence = [[NSArray arrayWithObjects:@"min",@"max",@"value",nil] retain];
+	}
+	return stepperKeySequence;
+}
 
 -(UIViewAutoresizing)verifyAutoresizing:(UIViewAutoresizing)suggestedResizing
 {

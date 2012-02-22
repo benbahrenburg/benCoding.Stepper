@@ -68,8 +68,8 @@ the fire event will be called each time the value is changed.<div style="border-
 &nbsp;&nbsp;&nbsp; min:10, //Minimum stepper value<br />
 &nbsp;&nbsp;&nbsp; max:200,//Maximum stepper value<br />
 &nbsp;&nbsp;&nbsp; value:25, //Initial or starting value of the stepper<br />
-&nbsp;&nbsp;&nbsp; continuous:true //If the stepper should send change events 
-	immediately or wait until touchend<br />
+&nbsp;&nbsp;&nbsp; continuous:true //Stepper will increment by 1 ( or 
+	stepvalue ) per touch<br />
 	});</strong></p>
 </div>
 
@@ -112,7 +112,12 @@ the fire event will be called each time the value is changed.<div style="border-
 		<td class="auto-style7" style="width: 296px; height: 23px">if true, 
 		value change events are sent immediately when the value changes during 
 		user interaction. If false, a value change event is sent when user 
-		interaction ends. (read/write)</td>
+		interaction ends. <br />
+		<br />
+		If true the stepper&#39;s value will continue to increase/decrease until the 
+		touchend event is fired.<br />
+		<br />
+		(read/write)</td>
 	</tr>
 	
 	<tr>
@@ -167,9 +172,9 @@ or
 	it&#39;s max, off by default<br />
 &nbsp;&nbsp;&nbsp; stepValue:2, //Will increment each stepper change action by 
 	2, this is 1 by default<br />
-&nbsp;&nbsp;&nbsp; continuous:true //Event triggered with each value change 
-	(true by default) <br />
-	});<br />
+&nbsp;&nbsp;&nbsp; continuous:true //Stepper will increment by 1 ( or stepvalue 
+	) per touch<br />
+	});
 	</strong><br />
 	</p>
 </div>
