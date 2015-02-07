@@ -13,6 +13,6 @@ copyright: Copyright (c) 2012 by benCoding.Com
 # these should not be edited
 name: stepper
 moduleid: bencoding.stepper
-guid: 83883a90-ce38-4677-98c8-09dd820675c1
+guid: 845f9d15-31dd-41e0-9225-d0bd4fb8ab04
 platform: iphone
 minsdk: 3.5.0.GA
