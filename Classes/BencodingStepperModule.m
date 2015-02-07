@@ -16,16 +16,7 @@
 // this is generated for your module, please do not change it
 -(id)moduleGUID
 {
-    bool marketPlace=NO;
-    
-    if(marketPlace)
-    {
-        return @"83883a90-ce38-4677-98c8-09dd820675c1";
-    }
-    else
-    {
-        return @"845f9d15-31dd-41e0-9225-d0bd4fb8ab04";
-    }    
+    return @"845f9d15-31dd-41e0-9225-d0bd4fb8ab04";
 }
 
 // this is generated for your module, please do not change it

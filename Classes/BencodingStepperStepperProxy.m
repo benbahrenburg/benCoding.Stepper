@@ -17,7 +17,7 @@ NSArray* stepperKeySequence;
 {
 	if (stepperKeySequence == nil)
 	{
-		stepperKeySequence = [[NSArray arrayWithObjects:@"min",@"max",@"value",nil] retain];
+		stepperKeySequence = [NSArray arrayWithObjects:@"min",@"max",@"value",nil];
 	}
 	return stepperKeySequence;
 }

@@ -12,8 +12,7 @@
 -(void)dealloc
 {
 	[stepperView removeTarget:self action:@selector(stepperPressed:) forControlEvents:UIControlEventValueChanged];
-	RELEASE_TO_NIL(stepperView);
-	[super dealloc];
+	//RELEASE_TO_NIL(stepperView);
 }
 
 -(UIStepper*)stepperView
@@ -94,7 +93,7 @@
 	return fitSize.height;
 }
 
-USE_PROXY_FOR_VERIFY_AUTORESIZING
+//USE_PROXY_FOR_VERIFY_AUTORESIZING
 
 #pragma mark Delegates 
 
